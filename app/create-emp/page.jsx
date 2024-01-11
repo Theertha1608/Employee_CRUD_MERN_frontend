@@ -50,7 +50,7 @@ const CreateEmployee = () => {
 
   const formik = useFormik({
     initialValues,
-    // validationSchema,
+    
     onSubmit: handleSubmit,
   });
   return (
@@ -81,14 +81,14 @@ const CreateEmployee = () => {
               onBlur={formik.handleBlur}
               value={formik.values.email}
             />
-            {/* Dropdown for Department */}
+        
             <select
               id="department"
               name="department"
               className="border border-gray-300 p-2 rounded-md w-full mb-4 bg-white"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.department} // Corrected value
+              value={formik.values.department} 
             >
               {departments.map((dept) => (
                 <option key={dept} value={dept}>
@@ -126,7 +126,7 @@ const CreateEmployee = () => {
               onBlur={formik.handleBlur}
               value={formik.values.emp_age}
             />
-            {/* Dropdown for Experience */}
+ 
             <select
               id="no_of_experience"
               name="no_of_experience"
